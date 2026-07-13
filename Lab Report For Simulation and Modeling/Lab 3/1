@@ -1,0 +1,4 @@
+// Explain GPSS blocks (major blocks that we use commonly).
+// General Purpose Simulation System:-
+// GPSS is a discrete time simulation general-purpose programming language where a simulation clock advances in discrete steps. A system is modeled as transactions enter the system and are passed from one service to another. This is particularly well suited for problems such as factory. GPSS is less flexible than simulatin lauguages such as Simula and SIMSCRIPT but it is eaiser to use and most popular.
+// 
