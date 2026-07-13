@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.a.com" xmlns="http://www.a.com"
+elementFormDefault="qualified">
+    <xs:element name ="note"> <!-- Root element-->
+       <xs:complexType>
+          <xs:sequence>
+             <xs:element name="id" type="xs:integer"></xs:element>
+             <xs:element name="name" type="xs:string"></xs:element>
+             <xs:element name="address" type="xs:string"></xs:element>
+             <xs:element name="email" type="xs:string" maxOccurs="5" minOccurs="2"></xs:element>
+             <xs:element name="dob" type="xs:date"></xs:element>
+             <xs:element name="pi" type="xs:decimal" fixed="3.14"></xs:element>
+          </xs:sequence>
+          <xs:attribute name="age" type="xs:int" fixed="45"></xs:attribute>
+       </xs:complexType>
+    </xs:element>
+</xs:schema>

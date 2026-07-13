@@ -1,0 +1,7 @@
+<!-- Write a DTD for the above class.XML but make sure the id element will be an attribute for <student> element and which is REQUIRED.--> 
+    <!ELEMENT class (student+)>
+    <!ELEMENT student (name, branch, cgpa)>
+    <!ATTLIST student id CDATA #REQUIRED> 
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT branch (#PCDATA)>
+    <!ELEMENT cgpa (#PCDATA)>

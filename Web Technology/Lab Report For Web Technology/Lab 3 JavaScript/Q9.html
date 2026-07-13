@@ -1,0 +1,44 @@
+<!-- Write JSON to implement JSON.parse() and JSON.stringify() methods.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Parse and Stringify Demo</title>
+</head>
+
+<body>
+    <h1>Name: Prajwal Chaulagain</h1>
+    <h1>Symbol No.: 80010773</h1>
+    
+    <h2>JSON Parse and Stringify Demo</h2>
+
+    <script>
+        const user = {
+            name: "Prajwal",
+            age: 22,
+            email: "prajwal@example.com",
+            isAdmin: false,
+            hobbies: ["reading", "gaming", "traveling"]
+        };
+
+        // Convert object to JSON string (pretty-printed with 2-space indentation)
+        const jsonString = JSON.stringify(user, null, 2);
+
+        // Display JSON string inside a <pre> block for proper formatting
+        // document.write("<pre>");
+        document.write("JSON String:\n" + jsonString + "\n\n");
+
+        // Convert JSON string back to object
+        const parsedUser = JSON.parse(jsonString);
+        document.write("Parsed Object:\n" + JSON.stringify(parsedUser, null, 2) + "\n\n");
+
+        // Access individual values
+        document.write("Name: " + parsedUser.name + "<br>");
+        document.write("Second Hobby: " + parsedUser.hobbies[1] + "\n");
+        // document.write("</pre>");
+    </script>
+</body>
+
+</html>

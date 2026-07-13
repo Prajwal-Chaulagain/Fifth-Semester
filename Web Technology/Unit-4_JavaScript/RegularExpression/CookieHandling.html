@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Handling</title>
+</head>
+<body>
+    <button id="saveid"> Save Cookie</button>
+    <button id="deleteid"> Delete Cookie</button>
+    <button id="update"> Update Cookie</button>
+    <script>
+        var x = document.getElementById("saveid").addEventListener("dblclick", saveCookie);
+        function saveCookie(){
+            let user = "Prajwal";
+            document.cookie="username='"+ user + "''; expires="+ Date() + ";path=/";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throw Keyword</title>
+  </head>
+  <body>
+    Enter any number:
+    <input type=" text" id="numid" />
+    <button id="btnid">Create Errors</button>
+    <script>
+      document.getElementById("btnid").addEventListener("click", create);
+      function create() {
+        var value = document.getElementById("numid").value;
+        try {
+          if (value == "") 
+            throw "Empty Error";
+          if (isNaN(value)) 
+            throw "Not a number Error";
+          //throw "Undefined error";
+          var newvar = Number(value); //Convert string into number
+          if (newvar > 100) 
+            throw "Full Marks Exceed Error";
+          if (newvar < 24) 
+            throw "Fail Error";
+          else
+            document.write(
+              "You have passed the examination with " + newvar + " marks"
+            );
+        } catch (err) {
+          document.writeln("Error is " + err);
+        }
+      }
+    </script>
+  </body>
+</html>

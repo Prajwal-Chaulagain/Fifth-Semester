@@ -1,0 +1,20 @@
+<class>
+    <student>
+        <name> Subhash </name>
+        <id> 001 </id>
+        <branch> CSIT </branch>
+        <cgpa> 9.0 </cgpa>
+    </student>
+    <student>
+        <name> Mahesh </name>
+        <id> 003 </id>
+        <branch> BCA </branch>
+        <cgpa> 8.0 </cgpa>
+    </student>
+    <student>
+        <name> Anup </name>
+        <id> 008 </id>
+        <branch> BBM </branch>
+        <cgpa> 7.8 </cgpa>
+    </student>
+</class>

@@ -1,0 +1,10 @@
+<!ELEMENT note (to, from,heading,body)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT heading (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
+<!ATTLIST from emailid CDATA "prajwal@gmail.com">
+
+<!--DTD
+        is a Document Type definition used to define a rule for creating the valid xml document -->
+        

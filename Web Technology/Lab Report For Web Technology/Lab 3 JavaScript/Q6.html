@@ -1,0 +1,79 @@
+<!-- Write a JS code for handling COOKIES using different functions required for COOKIES.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handling Cookies</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Name: Prajwal Chaulagain</h1>
+    <h1>Symbol No.: 80010773</h1>
+    
+    <label for="username">Enter your name:</label>
+    <input type="text" id="username" name="username" placeholder="Your name">
+    <button onclick="setCookie()">Set Cookie</button>
+
+    <!-- Button to show cookies -->
+    <button onclick="showCookie()">Show Cookies</button>
+
+    <!-- Button to delete cookies -->
+    <button onclick="deleteCookie()">Delete Cookies</button>
+
+    <p id="message"></p>
+
+    <script>
+        // Function to set a cookie
+        function setCookie() {
+            const name = document.getElementById('username').value;
+            if (!name) {
+                alert("Please enter a name!");
+                return;
+            }
+            // Cookie expires in 7 days
+            const d = new Date();
+            d.setTime(d.getTime() + (7 * 24 * 60 * 60 * 1000));
+            const expires = "expires=" + d.toUTCString();
+            document.cookie = "username=" + name + ";" + expires + ";path=/";
+            document.getElementById('message').textContent = "Cookie has been set!";
+        }
+
+        function getCookie(cname) {
+            const name = cname + "=";
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i].trim();
+                if (c.indexOf(name) === 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function showCookie() {
+            const user = getCookie("username");
+            if (user) {
+                document.getElementById('message').textContent = "Hello, " + user + "! Your cookie is here.";
+            } else {
+                document.getElementById('message').textContent = "No cookie found.";
+            }
+        }
+
+        // Function to delete the cookie
+        function deleteCookie() {
+            document.cookie = "username=; expires=Wed, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.getElementById('message').textContent = "Cookie has been deleted!";
+        }
+    </script>
+</body>
+
+</html>

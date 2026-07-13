@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessing HTML Elements</title>
+  </head>
+  <body>
+    <div id="testid">This is div id is testid.</div>
+    <div class="class1">This is class 1.</div>
+    <p class="class1">This is class 1.</p>
+    <p class="class3">This is class 3.</p>
+  </body>
+  <script>
+    // 1. getElementById("id")
+    // 2. getElementsByClassName("classname")
+    // 3. getElementsByTagName("tag")
+    // 4. querySelectorAll()
+
+    var tag = document.getElementById("testid"); //it select the tag with id testid
+    tag.style.color = "red";
+    var xarr = document.getElementsByClassName("class1");
+    for (i = 0; i < xarr.length; i++) {
+      xarr[i].style.color = "green";
+    }
+    var yarr = document.getElementsByTagName("p");
+    yarr[0].style.backgroundColor = "red";
+  </script>
+</html>

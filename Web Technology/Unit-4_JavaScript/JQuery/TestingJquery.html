@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Jquery</title>
+</head>
+<script src="JQuery.js"></script>
+<body>
+    <p>Click me to hide</p>
+    <p>Click me to hide</p>
+
+    <script>
+        $(document).ready(function(){//Loading the html document
+            $("p:first").click(function(){
+                $(this).hide();//anywhere defined as visibity:hidden
+
+            });
+        });
+    </script>
+</body>
+</html>

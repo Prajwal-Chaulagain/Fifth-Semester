@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <div id="Ajaxid"> 
+        <h2>Change This content only without reloading the page.</h2>
+        </div>
+<button type="button" onclick="loadDoc('Prajwal.txt')">Change Content</button>
+        <script>
+function loadDoc(url){
+    var xhttpR = new XMLHttpRequest();
+    xhttpR.onreadystatechange = function(){
+        if (xhttpR.readyState == 4 && xhttpR.status == 200){
+            document.getElementById("Ajaxid").innerHTML = xhttpR.responseText;
+
+        }
+    };
+    xhttpR.open("GET", url, true);
+    xhttpR.send();
+}
+        </script>
+    </body>
+</html>

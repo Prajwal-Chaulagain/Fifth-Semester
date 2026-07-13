@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+<body>
+    <h2>Registration form</h2>
+    <table>
+        <form action="any url" method="post/get" onsubmit="return validate()">
+            <tr>
+                <td><label for="">Firstname:-</label></td>
+                <td><input type="text" name="fname"></td>
+            </tr>
+            <tr>
+                <td><label for="">Lastname:-</label></td>
+                <td><input type="text" name="lname"></td>
+            </tr>
+            <tr>
+                <td><label for="">Contact No.:-</label></td>
+                <td><input type="text" name="contact"></td>
+            </tr>
+            <tr>
+                <td><label for="">Email:-</label></td>
+                <td><input type="text" name="email"></td>
+            </tr>
+            <tr>
+                <td><label for="">Address:-</label></td>
+                <td><input type="text" name="address"></td>
+            </tr>
+            <tr>
+                <td><label for="">Select Gender:-</label></td>
+                <td><input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female</td>
+            </tr>
+            <tr>
+                <td><label for="">Select Country:-</label></td>
+                <td><select name=""id="">
+                    <option value="Nepal">Nepal</option>
+                    <option value="India">India</option>
+                    <option value="China">China</option>
+                    <option value="Pakistan">Pakistan</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="">Select Subject:-</label></td>
+                <td><input type="checkbox"
+                name="webtechnology" id="">Web Technology
+                <input type="checkbox"
+                name="sad" id="">System Analysis and Design
+                <input type="checkbox"
+                name="DAA" id="">Design and Analysis of Algorithms <br>
+                <input type="checkbox"
+                name="Cryptography" id="">Cryptography
+                <input type="checkbox"
+                name="Multimedia Computing" id="">Multimedia Computing
+                <input type="checkbox"
+                name="Simulation and Modeling" id="">Simulation and Modeling
+            </td>
+            </tr>
+            <tr>
+                <td><input type="reset" value="Clear" style="background-color: red; color: white;"></td>
+                <td><input type="Submit" value="Register" style="width: 20%; 
+                background-color: green; color: white;">
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+<script>
+    function validate(){
+        alert("You can validate the data now.");
+    }
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!-- Write a JS code for implementing the dialog box such as alert, confirm and prompt . Also write a JavaScript to multiply two numbers using prompt popup box.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Boxes</title>
+</head>
+
+<body>
+    <h1>Name: Prajwal Chaulagain</h1>
+    <h1>Symbol No.: 80010773</h1>
+    
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="showConfirm()">Show Confirm</button>
+    <button onclick="showPrompt()">Show Prompt</button>
+    <button onclick="multiplyNumbers()">Multiply Numbers</button>
+</body>
+<script>
+    function showAlert() {
+        alert("This is an alert box!");
+    }
+
+    function showConfirm() {
+        let result = confirm("Do you want to continue?");
+        if (result) {
+            alert("You clicked 'OK'");
+        } else {
+            alert("You clicked 'Cancel'");
+        }
+    }
+
+    function showPrompt() {
+        let name = prompt("Enter your name:");
+        if (name != null) {
+            alert("Hello " + name + "! Welcome to our website.");
+        }
+    }
+    function multiplyNumbers() {
+        let num1 = prompt("Enter the first number:");
+        let num2 = prompt("Enter the second number:");
+        if (num1 != null && num2 != null) {
+            let result = parseFloat(num1) * parseFloat(num2);
+            alert("The product is: " + result);
+        }
+    }
+</script>
+
+</html>

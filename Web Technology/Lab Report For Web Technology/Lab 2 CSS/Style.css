@@ -1,0 +1,12 @@
+/* External CSS */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.external-style {
+    color: blue;
+    font-size: 20px;
+    border: 2px solid blue;
+    padding: 10px;
+}

@@ -1,0 +1,12 @@
+h2{
+    font-weight: bold;
+    color: red;
+    text-align: center;font-style: oblique;
+}
+p{
+    color: blue;
+    font-style: italic;
+    color: red;
+    font-size: xx-large;
+    text-align: center;
+}

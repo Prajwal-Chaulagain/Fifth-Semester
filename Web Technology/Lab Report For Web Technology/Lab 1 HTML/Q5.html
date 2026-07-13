@@ -1,0 +1,64 @@
+<!-- Write a HTML document that implements HTML Events(form elements events, keyboard events,mouse events), in inline approach. E.g. <button onclick="this.innerHTML = Date()">The time is?</button>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Inline Events Demo</title>
+</head>
+<body>
+    <h1>Name: Prajwal Chaulagain</h1>
+    <h1>Symbol No.: 80010773</h1>
+    <h2>1. Button Click Event</h2>
+    <button onclick="this.innerHTML = Date()">The time is?</button>
+
+    <hr>
+
+    <h2>2. Form Element Events</h2>
+    <!-- onfocus and onblur -->
+    Name: 
+    <input type="text" 
+           onfocus="this.style.backgroundColor='lightyellow'" 
+           onblur="this.style.backgroundColor='white'">
+    <br><br>
+
+    <!-- onchange -->
+    Select your favorite color:
+    <select onchange="alert('You selected: ' + this.value)">
+        <option value="">--Choose--</option>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+    </select>
+
+    <hr>
+
+    <h2>3. Keyboard Events</h2>
+
+    <!-- onkeydown -->
+    Type something:
+    <input type="text" 
+           onkeydown="document.getElementById('keyEvent').innerHTML='Key Down Detected'" 
+           onkeyup="document.getElementById('keyEvent').innerHTML='Key Released'">
+    
+    <p id="keyEvent"></p>
+
+    <hr>
+
+    <h2>4. Mouse Events</h2>
+
+    <!-- onmouseover and onmouseout -->
+    <div 
+        onmouseover="this.style.color='red'" 
+        onmouseout="this.style.color='black'"
+        style="width:200px; padding:10px; border:1px solid black;">
+        Hover over this text
+    </div>
+
+    <br>
+
+    <!-- ondblclick -->
+    <p ondblclick="this.innerHTML='You double-clicked me!'">
+        Double-click this paragraph
+    </p>
+
+</body>
+</html>

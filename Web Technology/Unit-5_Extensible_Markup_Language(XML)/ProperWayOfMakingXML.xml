@@ -1,0 +1,10 @@
+<student>
+       <id>100</id>
+       <name>Prajwal Chaulagain</name>
+       <dob>
+           <day>02</day>
+           <month>11</month>
+           <year>2003</year>
+       </dob>
+       <address>Chapagaun</address>
+</student>

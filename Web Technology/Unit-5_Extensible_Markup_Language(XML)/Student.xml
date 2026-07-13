@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<note xmlns="http://www.a.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.a.com note.xsd" age="45">
+  <id>101</id>
+  <name>Prajwal</name>
+  <address>Chapagaun</address>
+  <email>prajwal@gmail.com</email> 
+  <email>prajwal@gmail.com</email>
+  <dob>2003-02-11</dob>
+  <pi>3.14</pi>
+
+</note>

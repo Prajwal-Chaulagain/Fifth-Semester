@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exec() Method</title>
+</head>
+<body>
+    <script>
+        var url = 'https://vedascollege.edu.np';
+        // Creating regex object
+        let re = new RegExp(/[^.]+/); // rule is: [^.]+ mean "one or more not-dot characters"
+        let result = re.exec(url)[0];
+        document.write(result + "</br>");
+        let result1 = re.exec(url)[0].substring(8);
+        document.write(result);
+
+
+    </script>
+</body>
+</html>

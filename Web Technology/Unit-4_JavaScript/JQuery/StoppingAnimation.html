@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopping Animation</title>
+    <script src="JQuery.js"></script>
+</head>
+<body>
+    <button id="flip">Flip Down</button>
+    <button id="stop">Stop Flipping</button>
+    <div id="panel">
+        This is a div panel that is going to flipped like a hero. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos nesciunt aperiam veritatis laboriosam in saepe vero eum cum adipisci enim doloribus, sunt consequatur magnam, consequuntur sed aspernatur! Molestias, sapiente sint?
+        Reiciendis adipisci assumenda, vitae dignissimos fugit consequatur molestias voluptatem ea cumque corrupti aspernatur laboriosam! Vitae molestiae animi, mollitia aut quas omnis tempora eius unde, nobis iste atque, laudantium earum voluptatum.
+        Earum, rerum suscipit iusto excepturi adipisci quas veritatis aperiam molestiae cum quidem, id corporis reiciendis tempore ducimus rem ab non error dolores recusandae! Nulla omnis temporibus, est porro voluptas fugit!
+    </div>
+
+
+
+    <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").hide().slideDown(5000, function(){
+                    $(this).slideUp(3000);
+                });
+            });
+            $("#stop").click(function(){
+                $("#panel").stop();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!-- Write JQuery for any 5 JQuery events.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Events</title>
+    <script src="JQuery.js"></script>
+    <style>
+        .box {
+            width: 150px;
+            height: 100px;
+            background-color: lightgreen;
+            margin: 10px 0;
+            line-height: 100px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        input {
+            margin: 10px 0;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Name: Prajwal Chaulagain</h1>
+    <h1>Symbol No.: 80010773</h1>
+
+    <h2>JQuery Events</h2>
+
+    <!-- Click event -->
+    <button id="clickBtn">Click Me</button>
+
+    <!-- dblclick event -->
+    <div id="dblclick" class="box">Double-click Me</div>
+
+    <!-- mouseenter and mouseleave events -->
+    <div id="hoverBox" class="box">Hover Over Me</div>
+
+    <!-- focus and blur events -->
+    <input type="text" id="nameInput" placeholder="Focus on me">
+
+    <!-- keypress event -->
+    <input type="text" id="keyInput" placeholder="Type something">
+
+    <p id="message"></p>
+    <script>
+        $(document).ready(function () {
+            // Click event
+            $("#clickBtn").click(function () {
+                $("#message").text("Button was clicked!");
+            });
+
+            // Double-click event
+            $("#dblclick").dblclick(function () {   // ✅ corrected ID
+                $(this).css("background-color", "orange").text("Double-clicked!");
+            });
+
+            // Mouseenter and Mouseleave events
+            $("#hoverBox").mouseenter(function () {
+                $(this).css("background-color", "yellow").text("Mouse Entered!");
+            }).mouseleave(function () {
+                $(this).css("background-color", "lightgreen").text("Hover Over Me");
+            });
+
+            // Focus and Blur events
+            $("#nameInput").focus(function () {
+                $(this).css("border", "2px solid blue");
+                $("#message").text("Input field is focused");
+            }).blur(function () {
+                $(this).css("border", "1px solid #ccc");
+                $("#message").text("Input field lost focus");
+            });
+
+            // Keypress event
+            $("#keyInput").keypress(function (e) {
+                $("#message").text("Key pressed: " + e.key);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Jquery</title>
+</head>
+<script src="JQuery.js"></script>
+<body>
+    <ul>
+        <li>I am first ul first li</li>
+        <li>I am first ul second li</li>
+    </ul>
+    <ul>
+        <li>I am second ul first li</li>
+        <li>I am second ul second li</li>
+    </ul>
+    <input type="text" name=""id="">
+
+    <script>
+        $(document).ready(function(){//Loading the html document
+            $("ul li:first-child").hover(function(){
+                //$(this).hide();
+                $(this).css("color", "red");
+
+            });
+            $("input").focus(function(){
+                $(this).css("background","green");
+                $(this).css("color", "white");
+            });
+            $("input").blur(function(){
+                $(this).css("background","white");
+                $(this).css("color","white");
+            });
+        });
+    </script>
+</body>
+</html>

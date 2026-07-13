@@ -1,0 +1,34 @@
+<!-- Write a program to implement the concept of Object oriented approach(class, object, constructors) in JavaScript.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP in JS</title>
+</head>
+<body>
+    <h1>Name: Prajwal Chaulagain</h1>
+    <h1>Symbol No.: 80010773</h1>
+    
+</body>
+<script>
+    // Constructor function for creating a Person object
+    function Person(name, age) {
+        this.name = name; // Property: name
+        this.age = age;   // Property: age
+
+        // Method to display person's information
+        this.displayInfo = function() {
+            console.log("Name: " + this.name + ", Age: " + this.age);
+        };
+    }
+
+    // Creating an instance of the Person class
+    var person1 = new Person("Prajwal",  22);
+    var person2 = new Person("Anil",  25);
+
+    // Displaying information of the created objects
+    document.writeln("Name: " + person1.name + ", Age: " + person1.age + "<br>");
+    document.writeln("Name: " + person2.name + ", Age: " + person2.age + "<br>");
+</script>
+</html>

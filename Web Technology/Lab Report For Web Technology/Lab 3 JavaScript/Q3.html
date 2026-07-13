@@ -1,0 +1,39 @@
+<!-- Write a JS program implementing the concept of Built-in-objects (Window, String, Number, Boolean, Date, Math, RegExp, Form).-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built-in Objects in JS</title>
+</head>
+<body>
+    <h1>Name: Prajwal Chaulagain</h1>
+    <h1>Symbol No.: 80010773</h1>
+    
+</body>
+<script>
+    // Using Window object to display an alert
+    window.alert("Welcome to JavaScript Built-in Objects!");
+
+    // Using String object
+    let str = new String("Hello, World!");
+    document.writeln(str.toUpperCase()); // Output: HELLO, WORLD!
+
+    // Using Number object
+    let num = new Number(42);
+    document.writeln(num.toFixed(2)); // Output: 42.00
+    // Using Boolean object
+    let bool = new Boolean(true);
+    document.writeln(bool.valueOf()); // Output: true
+
+    // Using Date object
+    let date = new Date();
+    document.writeln(date.toDateString()); // Output: Current date in string format
+    // Using Math object
+    document.writeln(Math.sqrt(16)); // Output: 4
+
+    // Using RegExp object
+    let regex = new RegExp('hello', 'i');
+    document.writeln(regex.test('Hello, World!')); // Output: true
+</script>
+</html>

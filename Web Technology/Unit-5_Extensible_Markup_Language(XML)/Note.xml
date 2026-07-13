@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE note SYSTEM "Note.dtd">
+
+<!-- Using external DTD file in any XML document -->
+<note>
+<to> Ram</to>
+<from emailid="prajwal@gmail.com"> Hari</from>
+<heading> A notification for assignment</heading>
+<body>Hello boys submit your assignment</body>
+</note>

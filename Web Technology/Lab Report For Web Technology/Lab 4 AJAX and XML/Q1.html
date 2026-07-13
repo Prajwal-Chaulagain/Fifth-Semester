@@ -1,0 +1,34 @@
+<!-- Write JavaScript to retrieve the information stored in following XML document in html table using AJAX.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retrieve Data</title>
+  </head>
+
+  <body>
+    <script>
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function () {
+              if (this.readyState == 4 && this.status == 200) {
+                  var xmlDoc = this.responseXML;
+                  var students = xmlDoc.getElementsByTagName("student");
+                  var table = "<table border='1'><tr><th>Name</th><th>ID</th><th>Branch</th><th>CGPA</th></tr>";
+
+                  for (var i = 0; i < students.length; i++) {
+                      var name = students[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+                      var id = students[i].getElementsByTagName("id")[0].childNodes[0].nodeValue;
+                      var branch = students[i].getElementsByTagName("branch")[0].childNodes[0].nodeValue;
+                      var cgpa = students[i].getElementsByTagName("cgpa")[0].childNodes[0].nodeValue;
+                      table += "<tr><td>" + name + "</td><td>" + id + "</td><td>" + branch + "</td><td>" + cgpa + "</td></tr>";
+                  }
+                  table += "</table>";
+                  document.write("<h1>Name: Prajwal Chaulagain</h1><h1>Symbol No.: 80010773</h1>"+table);
+              }
+          };
+          xhttp.open("GET", "Q1Class.xml", true);
+          xhttp.send();
+    </script>
+  </body>
+</html>

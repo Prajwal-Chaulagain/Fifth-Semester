@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons Javascript</title>
+</head>
+
+<body>
+    <button id="btn1" onclick="status(this)">Button 1</button>
+    <button id="btn2" onclick="status(this)" style="visibility:hidden;">Button 2</button>
+</body>
+<script>
+    x = document.getElementsByTagName("button");
+    function status(tag) {
+        tag.style.visibility = "hidden";
+        if (tag == x[0]) {
+            x[1].style.visibility = "visible";
+        }
+        else {
+            x[0].style.visibility = "visible";
+        }
+    }
+
+</script>
+</html>

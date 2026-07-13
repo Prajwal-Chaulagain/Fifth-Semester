@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Handling</title>
+  </head>
+  <body>
+    <script>
+      function validateForm() {
+        var fn = document.forms["myForm"]["fname"].value;
+        var ln = document.forms["myForm"]["fname"].value;
+        var fn = x.value;
+        var ln = y.value;
+
+        if (fn == "") {
+          x.style.backgroundColor = "red";
+          return false;
+        } else if (ln == "") {
+          y.style.backgroundColor = "red";
+          return false;
+        }
+      }
+    </script>
+    <form name="myForm" onsubmit="return validateForm()">
+      Name: <input type="text" name="fname" />
+      <input type="text" name="lname" />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

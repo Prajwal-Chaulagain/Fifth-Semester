@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and Objects</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class Company {
+        constructor( name, address){  // Company()
+            this.name = name; // Variable initialisation
+            this.address = address; // Variable initialisation
+
+        }
+        display() {
+            return "<tr> <td>" + this.name + "</td> <td>" + this.address + "</td> </tr>";
+        }
+    }
+// Parameterised Constructor
+const microsoft = new Company("Microsoft", "USA"); // Object
+const google = new Company("Google", "New York"); // Object
+document.write('<br />');
+document.write("<table border=2px>"); // Print company names
+document.write("<th> Company Name:</th>"); // Print company names
+document.write("<th> Address:</th>"); // Print company names
+document.write(microsoft.display()); // Print company names
+document.write(google.display());
+document.write("</table>"); 
+
+
+</script>
+</html>

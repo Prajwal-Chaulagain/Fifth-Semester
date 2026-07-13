@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables In HTML</title>
+</head>
+<style>
+    tr:nth-child(even){
+        background-color: red;
+        color: white;
+    }
+    tr:nth-child(odd){
+        background-color: blue;
+        color: white;
+    }
+    table{
+        background-image:url("/Web\ Technology/Photos/Photo2.png.jpg")
+    }
+</style>
+<body>
+    <table border="2px" bgcolor="Black" cellpadding="10px" cellspacing="5px">
+        <th>SN.</th>
+        <th>Name.</th>
+        <th>Address.</th>
+        <th colspan="2">Contact No.</th>
+        <tr>
+            <td>1</td>
+            <td>Prajwal Chaulagain</td>
+            <td>Thasikhel-14, Lalitpur</td>
+            <td>9741819252</td>
+            <td>9741809050</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Anil Maharjan</td>
+            <td>Chapagaun</td>
+            <td>1000000000</td>
+            <td>2000000000</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Prajwal Chaulagain</td>
+            <td>Thasikhel-14, Lalitpur</td>
+            <td>9741819252</td>
+            <td>9741809050</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Prajwal Chaulagain</td>
+            <td>Thasikhel-14, Lalitpur</td>
+            <td>9741819252</td>
+            <td>9741809050</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Prajwal Chaulagain</td>
+            <td>Thasikhel-14, Lalitpur</td>
+            <td>9741819252</td>
+            <td>9741809050</td>
+        </tr>
+    </table>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <td>Prajwal</td>
+    </tr>
+    <tr>
+        <th rowspan="2">Contact</th>
+        <td>1000</td>
+    </tr>
+    <tr>
+        <td>2000</td>
+    </tr>
+</table>
+</body>
+</html>

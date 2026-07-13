@@ -1,0 +1,25 @@
+<!-- Write a Javascript to print the sum and average of inputed numbers and terminates the loop if we enter any negative number-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+ </head>
+ <body>
+    <script>
+        var count = 0;
+        var sum = 0;
+        do{
+            var num =Number(prompt("Enter any number", "0"));
+            sum = sum + num;
+            count++;
+        }
+        while (num > 0);
+        sum = sum - num; //-(-10)
+        count = count - 1;
+        alert("The summation=" + sum + " average=" + sum / count);
+    </script>
+ </body>
+ </html>
+

@@ -1,0 +1,150 @@
+<!-- Write a complete HTML document supported by CSS and JS to validate the form which contains
+name, email, phone number, address and country. (hint: validate all the form elements using JS).-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 350px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        label {
+            color: green;
+            font-size: large;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+            border-radius: 15px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 10px;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Name: Prajwal Chaulagain</h1>
+    <h1>Symbol No.: 80010773</h1>
+
+    <form id="myForm">
+        <label for="name">Enter name:</label>
+        <input type="text" id="name">
+        <div class="error" id="nameError"></div>
+
+        <label for="email">Enter your email:</label>
+        <input type="text" id="email">
+        <div class="error" id="emailError"></div>
+
+        <label for="phoneNum">Enter phone number:</label>
+        <input type="text" id="phoneNum">
+        <div class="error" id="phoneError"></div>
+
+        <label for="address">Enter address:</label>
+        <input type="text" id="address">
+        <div class="error" id="addressError"></div>
+
+        <label for="country">Enter country:</label>
+        <input type="text" id="country">
+        <div class="error" id="countryError"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            let isValid = true;
+
+            // Get values
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phoneNum").value.trim();
+            let address = document.getElementById("address").value.trim();
+            let country = document.getElementById("country").value.trim();
+
+            // Clear previous errors
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("phoneError").innerText = "";
+            document.getElementById("addressError").innerText = "";
+            document.getElementById("countryError").innerText = "";
+
+            // Name validation
+            if (name === "") {
+                document.getElementById("nameError").innerText = "Name is required.";
+                isValid = false;
+            }
+
+            // Email validation
+            let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (email === "") {
+                document.getElementById("emailError").innerText = "Email is required.";
+                isValid = false;
+            } else if (!email.match(emailPattern)) {
+                document.getElementById("emailError").innerText = "Enter a valid email.";
+                isValid = false;
+            }
+
+            // Phone validation (10 digits)
+            let phonePattern = /^[0-9]{10}$/;
+            if (phone === "") {
+                document.getElementById("phoneError").innerText = "Phone number is required.";
+                isValid = false;
+            } else if (!phone.match(phonePattern)) {
+                document.getElementById("phoneError").innerText = "Enter a valid 10-digit phone number.";
+                isValid = false;
+            }
+
+            // Address validation
+            if (address === "") {
+                document.getElementById("addressError").innerText = "Address is required.";
+                isValid = false;
+            }
+
+            // Country validation
+            if (country === "") {
+                document.getElementById("countryError").innerText = "Country is required.";
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert("Form submitted successfully!");
+                document.getElementById("myForm").reset();
+            }
+        });
+    </script>
+
+</body>
+</html>

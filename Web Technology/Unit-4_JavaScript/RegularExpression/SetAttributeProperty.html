@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Attribute Property</title>
+    <style>
+        /* body{
+            background-image: url(/Web_Technology/Photos/monitor.jpg);
+
+        } */
+    </style>
+</head>
+<body>
+    <h2>Change the background property using setAttribute function</h2>
+    <img src="/Web_Technology/Photos/monitor.jpg" alt="">
+    <button>Change background image</button>
+</body>
+<script>
+    document.getElementsByTagName("button")[0].onclick= function(){
+
+        // document.body.style.backgroundImage="url(/Web_Technology/Photos/Photo1.png.jpg)";
+        var imgtag=document.getElementsByTagName("img");
+        imgtag[0].src="/Web_Technology/Photos/Photo1.png.jpg";
+        imgtag[0].setAttribute("width","200px");
+        imgtag[0].setAttribute("height","200px");
+    }
+</script>
+</html>

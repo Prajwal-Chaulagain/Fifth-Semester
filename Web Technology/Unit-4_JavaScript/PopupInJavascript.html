@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Boxes</title>
+</head>
+<body>
+    <!-- alert(), confirm() and prompt(arguments)-->
+     <button onclick="addition()">Add Two Numbers</button>
+     <script>
+        function addition(){
+            fnum = prompt("Enter first num", "0");
+            snum = prompt("Enter second num", "0");
+            alert("The addition=" + (Number(fnum) + Number(snum)));
+            flag = confirm("Wish to add again?");
+            if(flag)
+        {
+            addition();
+        }
+        }
+     </script>
+</body>
+</html>

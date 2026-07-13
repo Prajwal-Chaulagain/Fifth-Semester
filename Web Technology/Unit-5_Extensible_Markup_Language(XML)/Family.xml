@@ -1,0 +1,11 @@
+<persons xmlns="http://www.a.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.a.com Family.xsd">
+    <person>
+        <full_name>Prajwal Chaulagain</full_name>
+        <child_name>Ram</child_name>
+        <child_name>ABC</child_name>
+    </person>
+    <person>
+        <full_name></full_name>
+    </person>
+</persons>

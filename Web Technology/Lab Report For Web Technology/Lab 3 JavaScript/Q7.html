@@ -1,0 +1,65 @@
+<!-- Write JQuery for element, id and class selectors to show and hide any html element.-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Example</title>
+    <script src="JQuery.js"></script>
+    <style>
+        .box {
+            width: 150px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px 0;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Name: Prajwal Chaulagain</h1>
+    <h1>Symbol No.: 80010773</h1>
+
+    <h2>JQuery Demo</h2>
+
+    <!-- Element selector example -->
+    <button id="toggleParagraph">Toggle Paragraph</button>
+    <p>This is a paragraph element.</p>
+
+    <!-- ID selector example -->
+    <button id="toggleDiv">Toggle Div by ID</button>
+    <div id="myDiv" class="box">Div with ID</div>
+
+    <!-- Class selector example -->
+    <button id="toggleClass">Toggle Boxes by Class</button>
+    <div class="myBox box">Box 1</div>
+    <div class="myBox box">Box 2</div>
+
+    <script>
+        $(document).ready(function () {
+            // Element selector: select all <p> elements
+            $("#toggleParagraph").click(function () {
+                $('p').toggle();
+            });
+
+            // ID selector: select element by ID
+            $('#toggleDiv').click(function () {
+                $('#myDiv').toggle();
+            });
+
+            // Class selector: select elements by class
+            $("#toggleClass").click(function () {
+                $(".myBox").toggle();
+            });
+        })
+    </script>
+</body>
+
+</html>
