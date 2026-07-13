@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Web-Based Multimedia Integration</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .student-info {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-left: 5px solid #007bff;
+        margin-bottom: 20px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+      .dropzone {
+        width: 300px;
+        height: 100px;
+        border: 2px dashed #333;
+        margin-top: 15px;
+        padding: 10px;
+        text-align: center;
+      }
+      .form-section {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="student-info">
+      <strong>Name:</strong> Prajwal Chaulagain <br />
+      <strong>Symbol No:</strong> 80010773
+    </div>
+    <h2>1. Text, Images, and Tables</h2>
+    <p>Embedding standard digital media via HTML.</p>
+    <img src="Duke.jpg" alt="Student Image" width="200" /><br /><br />
+    <table>
+      <tr>
+        <th>Compression Type</th>
+        <th>Algorithm</th>
+      </tr>
+      <tr>
+        <td>Lossless</td>
+        <td>Huffman / RLE</td>
+      </tr>
+      <tr>
+        <td>Lossy</td>
+        <td>JPEG (DCT-based)</td>
+      </tr>
+    </table>
+    <h2>2. Dropdown List and Radio Buttons</h2>
+    <div class="form-section">
+      <label for="compression">Select Compression Type:</label>
+      <select id="compression">
+        <option value="lossless">Lossless</option>
+        <option value="lossy">Lossy</option>
+      </select>
+      <p>Choose algorithm:</p>
+      <input type="radio" id="huffman" name="algorithm" value="Huffman" />
+      <label for="huffman">Huffman</label><br />
+      <input type="radio" id="rle" name="algorithm" value="RLE" />
+      <label for="rle">RLE</label><br />
+      <input type="radio" id="jpeg" name="algorithm" value="JPEG" />
+      <label for="jpeg">JPEG</label><br />
+    </div>
+    <h2>3. Audio and Video</h2>
+    <audio controls>
+      <source src="sample.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <br /><br />
+    <video width="320" height="240" controls>
+      <source src="Video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h2>4. Drag-and-Drop Simulation</h2>
+    <div id="dropzone" class="dropzone">Drag and drop a file here</div>
+    <p id="drop-result"></p>
+    <h2>5. Form Submission Simulation</h2>
+    <div class="form-section">
+      <form id="emailForm">
+        <label for="toEmail">To:</label>
+        <input type="email" id="toEmail" required /><br /><br />
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" required /><br /><br />
+        <textarea
+          id="message"
+          rows="4"
+          cols="50"
+          placeholder="Write your message 
+                here..."
+          required
+        ></textarea
+        ><br /><br />
+        <button type="submit">Send Email</button>
+      </form>
+      <p id="form-result"></p>
+    </div>
+    <script>
+      // Drag-and-Drop logic
+      const dropzone = document.getElementById("dropzone");
+      const dropResult = document.getElementById("drop-result");
+
+      dropzone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropzone.style.borderColor = "green";
+      });
+      dropzone.addEventListener("dragleave", () => {
+        dropzone.style.borderColor = "#333";
+      });
+      dropzone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        const files = e.dataTransfer.files;
+        dropResult.textContent = `File "${files[0].name}" dropped successfully!`;
+        dropzone.style.borderColor = "#333";
+      });
+      // Form submission simulation
+      const emailForm = document.getElementById("emailForm");
+      const formResult = document.getElementById("form-result");
+      emailForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const to = document.getElementById("toEmail").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+        formResult.textContent = `Email sent to ${to} with subject "${subject}" and message:         
+(simulation)`;
+        emailForm.reset();
+      });
+    </script>
+  </body>
+</html>
